@@ -39,6 +39,23 @@ export const apiList = (s, type) => {
   .then((response) => response.json())
   .then((result) => {
     const items = result.Search;
-    console.log(items);
+    viewItems(items);
   });
+};
+
+/** Estrapola ogni elemento dell'array e stampa le proprietà
+* @param {array di movie/serie/game} items 
+*/
+const viewItems = (items) => {
+//1. Ciclare l'array
+  items.map((item) => {
+//2. Estrapolare ogni item
+//  3. Estrapolare solo le proprietà che ci servono (title, poster, type)
+// Comando .map per ciclare gli array
+  console.group(item.Title);
+  console.log(item.Year);
+  console.log(item.Type);
+  console.group(item.Poster);
+  console.groupEnd();
+})
 };

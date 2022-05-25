@@ -18,11 +18,14 @@
 <script type="module">
     import {apiList} from "./moduli/modulo-api.js";
     import {CONTENT_TYPE} from "./moduli/config.js"
+
     console.log("Inizio esecuzione");
     //Chiamata solo per film
     apiList("Avengers", "");
+
     //Chiamata per serie/game/episodi
     apiList("Avengers", CONTENT_TYPE.SERIE);
+    
     console.log("Fine esecuzione");
 </script>
 </body>
