@@ -7,16 +7,23 @@
     <title>Document</title>
 </head>
 <body>
+    <!--  METODO VECCHIO
     <script type="module">
-        import {listAvengers} from "/moduli/modulo-api.js";
+        import {listAvengers, listAvengersSeries} from "/moduli/modulo-api.js";
         console.log("Inizio esecuzione");
         listAvengers();
-        console.log("Fine esecuzione");
-
-        import {listAvengersSeries} from "/moduli/modulo-api.js";
-        console.log("Inizio esecuzione");
         listAvengersSeries();
         console.log("Fine esecuzione");
-    </script>
+    </script> -->
+<script type="module">
+    import {apiList} from "./moduli/modulo-api.js";
+    import {CONTENT_TYPE} from "./moduli/config.js"
+    console.log("Inizio esecuzione");
+    //Chiamata solo per film
+    apiList("Avengers", "");
+    //Chiamata per serie/game/episodi
+    apiList("Avengers", CONTENT_TYPE.SERIE);
+    console.log("Fine esecuzione");
+</script>
 </body>
 </html>

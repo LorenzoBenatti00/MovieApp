@@ -1,8 +1,9 @@
+/*
 const URL_LIST_AVENGERS =
   "http://www.omdbapi.com/?apikey=46a5f494&s=Avengers"
-  /*
+  
    Chiama la web api con l'elenco di tutti i contenuti di "Avengers"
-   */
+   
 
   export const listAvengers = () => {
       fetch(URL_LIST_AVENGERS)
@@ -15,7 +16,7 @@ const URL_LIST_AVENGERS =
 
   /*
 Mettere la chiamata alla funzione per l'elenco della serie televisive "Avengers"
-   */
+   
 
 const URL_LIST_AVENGERSSERIES =
   "http://www.omdbapi.com/?apikey=46a5f494&s=Avengers&type=series"
@@ -27,4 +28,17 @@ const URL_LIST_AVENGERSSERIES =
         const series = results.Search;
         console.log(series);
     });
+};
+*/
+
+import {BASE_URL} from "./config.js"
+
+export const apiList = (s, type) => {
+  const url = BASE_URL + `s=${s}&type=${type}`;
+  fetch(url)
+  .then((response) => response.json())
+  .then((result) => {
+    const items = result.Search;
+    console.log(items);
+  });
 };
