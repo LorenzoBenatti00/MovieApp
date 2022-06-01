@@ -1,5 +1,5 @@
 //Chiamata con ricerca parametro "s" => terminator
-GET http://www.omdbapi.com/?apikey=46a5f494&t=terminator HTTP/1.1
+GET http://www.omdbapi.com/?apikey=46a5f494&t=Iron_man HTTP/1.1
 
 ###
 
