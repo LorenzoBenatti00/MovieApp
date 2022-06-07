@@ -45,8 +45,8 @@ export const apiList = (s, type) => {
 
 /** Estrapola ogni elemento dell'array e stampa le proprietà
 * @param {array di movie/serie/game} items 
-*/
-const viewItems = (items) => {
+
+const viewItems = (items) => {                                              !!!!!!!!!!!Vecchia lezione!!!!!!!!!!!!!!!!
 //1. Ciclare l'array
   items.map((item) => {
 //2. Estrapolare ogni item
@@ -59,3 +59,61 @@ const viewItems = (items) => {
   console.groupEnd();
 })
 };
+**/
+
+const viewItems = (items) => {
+  //Mi posiziono dove voglio mettere l'elenco dei movies
+  const element = document.getElementById("movies");
+  //Ciclare l'array
+  items.map((item) => {
+    //Creo il movie all'interno del DOM
+    element.appendChild(createHTMLMovie(item));
+  });
+};
+
+  const createHTMLMovie = (movie) => {
+    //Creo un tag P vuoto
+    const para = document.createElement("p");
+    //Creo un testo con il titolo del movie
+    const node = document.createTextNode(movie.Title);
+    //Inserisco dentro al tag P il testo
+    para.appendChild(node);
+
+    return para;
+
+  };
+
+  
+
+  //IRON MAN
+  export const apiList1 = (s, type) => {
+    const url1 = BASE_URL + `s=${s}&type=${type}`;
+    fetch(url1)
+    .then((response) => response.json())
+    .then((result) => {
+      const items1 = result.Search;
+      viewItems1(items1);
+    });
+  };
+
+  const viewItems1 = (items1) => {
+    //Mi posiziono dove voglio mettere l'elenco dei movies
+    const element = document.getElementById("card-1");
+    //Ciclare l'array
+    items1.map((item) => {
+      //Creo il movie all'interno del DOM
+      element.appendChild(createHTMLMovie1(item));
+    });
+  };
+  
+    const createHTMLMovie1 = (movie) => {
+      //Creo un tag P vuoto
+      const para1 = document.createElement("p");
+      //Creo un testo con il titolo del movie
+      const node1 = document.createTextNode(movie.Title);
+      //Inserisco dentro al tag P il testo
+      para1.appendChild(node1);
+  
+      return para1;
+  
+    };
