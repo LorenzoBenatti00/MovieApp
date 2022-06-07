@@ -1,3 +1,8 @@
+@font-face {
+    src: url(/SitoTipoNetflix/font/AvengeroRegular-zvgl.ttf);
+    font-family: avenger;
+}
+
 .main {
     background-color:white;
 }
@@ -10,7 +15,7 @@
 
 .navbar-brand img {
     height: 200px;
-
+    padding-bottom: 5%;
 }
 
 .sezione {
@@ -20,56 +25,91 @@
 #abovethefolde {
 background-color: white;
 align-content: center;
+height: 750px;
+}
+
+.carousel-inner {
+    margin: auto;
 }
 
 #fase1{
-    background-color: red;
+    background-color: rgb(175, 8, 16);
+    height: 1200px;
 }
 
 #fase2{
-    background-color: white;
+    background-color: rgb(175, 8, 16);
+    height: 1200px;
 }
 
 #fase3{
-    background-color: white;
+    background-color: rgb(175, 8, 16);
+    height: 2200px;
 }
 
 #fase4{
-    background-color: white;
+    background-color: rgb(175, 8, 16);
+    height: 1200px;
 }
 
 #serietv {
-    background-color: white;
+    background-color: rgb(175, 8, 16);
+    height: 1200px;
 }
 
 #connessioni {
-    background-color: white;
+    background-color: rgb(95, 95, 95);
 }
 
 .h1{
     font-size: 50px;
     text-align: center;
+    padding-bottom: 3%;
 }
 
 .nav-item {
     color: white;
+    padding-right: 6%;
+    font-size: 16px;
 }
 
 #navbarScrollingDropdown {
     color: white;
+    padding-right: 6%;
 }
 
 .card {
-    background-color: rgb(78, 78, 83);
-    padding-top: 10%;
+    background-color: black;
 }
 
+.card-body{
+    color: white;
+}
 
 .card-text {
-    align-content: center;
+    text-align: center;
+    color: white;
+}
+
+.col-3 {
+    padding-bottom: 5%;
+}
+
+.guidallavisione {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 0.4%;
 }
 
 #immagineguida {
     max-width: 100%;
     max-height: 100%;
+}
+
+.carousel-inner {
+    height: 750px;
+}
+
+.carousel-caption {
+    padding-bottom: 5%;
 }
