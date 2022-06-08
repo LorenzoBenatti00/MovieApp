@@ -1,5 +1,5 @@
 @font-face {
-    src: url(/SitoTipoNetflix/font/AvengeroRegular-zvgl.ttf);
+    src: url(../font/AvengeroRegular-zvgl.ttf);
     font-family: avenger;
 }
 
@@ -44,7 +44,7 @@ height: 750px;
 
 #fase3{
     background-color: rgb(175, 8, 16);
-    height: 2200px;
+    height: 2300px;
 }
 
 #fase4{
@@ -64,7 +64,9 @@ height: 750px;
 .h1{
     font-size: 50px;
     text-align: center;
+    padding-top: 3%;
     padding-bottom: 3%;
+    font-family: avenger;
 }
 
 .nav-item {
