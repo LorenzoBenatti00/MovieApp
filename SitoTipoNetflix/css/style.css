@@ -4,7 +4,7 @@
 }
 
 .main {
-    background-color:white;
+    background-color: white;
 }
 
 .navbar {
@@ -23,45 +23,45 @@
 }
 
 #abovethefolde {
-background-color: white;
-align-content: center;
-height: 750px;
+    background-color: white;
+    align-content: center;
+    height: 750px;
 }
 
 .carousel-inner {
     margin: auto;
 }
 
-#fase1{
+#fase1 {
     background-color: rgb(175, 8, 16);
-    height: 1200px;
+    height: 1530px;
 }
 
-#fase2{
+#fase2 {
     background-color: rgb(175, 8, 16);
-    height: 1200px;
+    height: 1570px;
 }
 
-#fase3{
+#fase3 {
     background-color: rgb(175, 8, 16);
-    height: 2300px;
+    height: 2980px;
 }
 
-#fase4{
+#fase4 {
     background-color: rgb(175, 8, 16);
-    height: 1200px;
+    height: 1630px;
 }
 
 #serietv {
     background-color: rgb(175, 8, 16);
-    height: 1200px;
+    height: 1550px;
 }
 
 #connessioni {
     background-color: rgb(95, 95, 95);
 }
 
-.h1{
+.h1 {
     font-size: 50px;
     text-align: center;
     padding-top: 3%;
@@ -72,20 +72,19 @@ height: 750px;
 .nav-item {
     color: white;
     padding-right: 6%;
-    font-size: 16px;
+    font-size: 15px;
+    font-family: avenger;
 }
 
 #navbarScrollingDropdown {
     color: white;
-    padding-right: 6%;
+    padding-right: 5%;
+    font-family: avenger;
+    font-size: 15px;
 }
 
 .card {
     background-color: black;
-}
-
-.card-body{
-    color: white;
 }
 
 .card-text {
@@ -100,7 +99,8 @@ height: 750px;
 .guidallavisione {
     font-size: 50px;
     text-align: center;
-    padding-top: 0.4%;
+    padding-top: 1.2%;
+    font-family: avenger;
 }
 
 #immagineguida {
@@ -114,4 +114,35 @@ height: 750px;
 
 .carousel-caption {
     padding-bottom: 5%;
+    font-family: avenger;
 }
+
+.dropdown-item {
+    font-family: avenger;
+}
+
+.card-image-top {
+    height: fit-content;
+}
+
+.card-body {
+    color: white;
+}
+
+.titolo {
+    font-family: avenger !important;
+    text-align: center;
+    color: white;
+}
+
+p {
+    margin-bottom: 0rem;
+}
+
+a{
+    text-decoration: none;
+}
+h5{
+    font-size: small !important;
+}
+

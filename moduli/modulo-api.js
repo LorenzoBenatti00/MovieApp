@@ -31,16 +31,16 @@ const URL_LIST_AVENGERSSERIES =
 };
 */
 
-import {BASE_URL} from "./config.js"
+import { BASE_URL, CONTENT_TYPE } from "./config.js"
 
 export const apiList = (s, type) => {
   const url = BASE_URL + `s=${s}&type=${type}`;
   fetch(url)
-  .then((response) => response.json())
-  .then((result) => {
-    const items = result.Search;
-    viewItems(items);
-  });
+    .then((response) => response.json())
+    .then((result) => {
+      const items = result.Search;
+      viewItems(items);
+    });
 };
 
 /** Estrapola ogni elemento dell'array e stampa le proprietà
@@ -71,49 +71,42 @@ const viewItems = (items) => {
   });
 };
 
-  const createHTMLMovie = (movie) => {
-    //Creo un tag P vuoto
-    const para = document.createElement("p");
-    //Creo un testo con il titolo del movie
-    const node = document.createTextNode(movie.Title);
-    //Inserisco dentro al tag P il testo
-    para.appendChild(node);
+const createHTMLMovie = (movie) => {
+  //Creo un tag P vuoto
+  const para = document.createElement("p");
+  //Creo un testo con il titolo del movie
+  const node = document.createTextNode(movie.Title);
+  //Inserisco dentro al tag P il testo
+  para.appendChild(node);
 
-    return para;
+  return para;
 
-  };
+};
 
-  
-
-  //IRON MAN
-  export const apiList1 = (s, type) => {
-    const url1 = BASE_URL + `s=${s}&type=${type}`;
-    fetch(url1)
+//CHIAMATE SITO TIPO NETFLIX
+export const apiList1 = (t,type,indice) => {
+  const url1 = BASE_URL + `t=${t}&type=${type}`;
+  fetch(url1)
     .then((response) => response.json())
     .then((result) => {
-      const items1 = result.Search;
-      viewItems1(items1);
+      viewItems1(result,indice);
     });
-  };
+};
 
-  const viewItems1 = (items1) => {
-    //Mi posiziono dove voglio mettere l'elenco dei movies
-    const element = document.getElementById("card-1");
-    //Ciclare l'array
-    items1.map((item) => {
-      //Creo il movie all'interno del DOM
-      element.appendChild(createHTMLMovie1(item));
-    });
-  };
+const viewItems1 = (items1,indice) => {
+  console.log(indice);
+  const element = document.getElementById("card-"+indice);
+    element.appendChild(createHTMLMovie1(items1));
+};
+
+const createHTMLMovie1 = (movie) => {
+  //Creo un tag P vuoto
+  const para1 = document.createElement("p");
+  para1.className="titolo";
+  para1.innerHTML = movie.Title + '<br>' + '<h5>' + 'Anno:'+ ' ' + movie.Year + '</h5>' + '<br>' + '<h5>' + 'Regista:'+ ' ' + movie.Director + '</h5>' + '<br>' + '<h5>' + 'Durata:'+ ' ' + movie.Runtime + '</h5>';
+ 
+
+  return para1;
   
-    const createHTMLMovie1 = (movie) => {
-      //Creo un tag P vuoto
-      const para1 = document.createElement("p");
-      //Creo un testo con il titolo del movie
-      const node1 = document.createTextNode(movie.Title);
-      //Inserisco dentro al tag P il testo
-      para1.appendChild(node1);
-  
-      return para1;
-  
-    };
+
+};

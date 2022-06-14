@@ -9,7 +9,7 @@ GET http://www.omdbapi.com/?apikey=46a5f494&t=terminator&type=movie HTTP/1.1
 ###
 
 //Chiamata con ricerca parametro "s" SOLO PER SERIES
-GET http://www.omdbapi.com/?apikey=46a5f494&t=Marvel&type=series HTTP/1.1
+GET http://www.omdbapi.com/?apikey=46a5f494&t=WandaVision&type=series HTTP/1.1
 
 ###
 
@@ -25,4 +25,4 @@ GET http://www.omdbapi.com/?apikey=46a5f494&t=tt0103064 HTTP/1.1
 
 //Chiamata per solo determinate pagine
 
-GET http://www.omdbapi.com/?apikey=46a5f494&t=Avengers HTTP/1.1
+GET http://www.omdbapi.com/?apikey=46a5f494&t=Iron%20man&type=movie HTTP/1.1
