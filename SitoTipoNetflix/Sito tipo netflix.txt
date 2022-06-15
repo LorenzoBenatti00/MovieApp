@@ -1,4 +1,0 @@
-Above the folde interattivo
-Sistemare navbar
-Griglia per le schede
-(Guida alla visione interattiva)
